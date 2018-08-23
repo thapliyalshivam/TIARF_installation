@@ -1,4 +1,5 @@
-import THREE from '/third_party/three.js';
+import THREE from './third_party/three.js';
+
 var scene = new THREE.Scene();
 
 	//scene.fog = new THREE.Fog(0x0000ff, 50,1000);
@@ -37,7 +38,7 @@ m.receiveShadow=true;
 
 
 				scene.add( new THREE.AmbientLight( 0x00020 ) );
-				light1 = new THREE.PointLight( 0xff0040, 1, 90 );
+				var light1 = new THREE.PointLight( 0xff0040, 1, 90 );
 
 light1.add(new THREE.Mesh(
   new THREE.SphereBufferGeometry( 0.5, 16, 8 ),
@@ -46,9 +47,9 @@ light1.add(new THREE.Mesh(
 
 
 scene.add( light1 );
-				light2 = new THREE.PointLight( 0x0040ff, 1, 90 );
+			var	light2 = new THREE.PointLight( 0x0040ff, 1, 90 );
 				scene.add( light2 );
-				light3 = new THREE.PointLight( 0x80ff80, 1, 90 );
+			var	light3 = new THREE.PointLight( 0x80ff80, 1, 90 );
 				scene.add( light3 );
 
 
