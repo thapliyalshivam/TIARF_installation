@@ -14,24 +14,24 @@ async function loadModule() {
 
 
 }
-
-async function init() {
-  let module = await loadModule();
-
-  async function reload() {
-    if (module && module.canvas) {
-      try {
-        document.body.removeChild(module.canvas);
-      } catch (e) {
-
-      }
-    }
-    module = await loadModule();
-  }
-
-  window.addEventListener('hashchange', async e => {
-    reload();
-  })
-}
+// 
+// async function init() {
+//   let module = await loadModule();
+//
+//   async function reload() {
+//     if (module && module.canvas) {
+//       try {
+//         document.body.removeChild(module.canvas);
+//       } catch (e) {
+//
+//       }
+//     }
+//     module = await loadModule();
+//   }
+//
+//   window.addEventListener('hashchange', async e => {
+//     reload();
+//   })
+// }
 
 window.addEventListener('load', loadModule);
