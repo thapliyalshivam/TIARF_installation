@@ -21,35 +21,9 @@ async function init() {
     module = await loadModule();
   }
 
-  const capturer = new CCapture({
-    verbose: false,
-    display: true,
-    framerate: 60,
-    motionBlurFrames: 0 * (960 / 60),
-    quality: 99,
-    format: 'gif',
-    timeLimit: module.loopDuration,
-    frameLimit: 0,
-    autoSaveTime: 0,
-    workersPath: 'js/'
-  });
-
-  let startTime = 0;
-
-  function capture() {
-    capturer.start();
-    startTime = performance.now();
-  }
-
-  document.getElementById('start').addEventListener('click', e => {
-    capture();
-    e.preventDefault();
-  });
-
   function update() {
     requestAnimationFrame(update);
-    if (!skip) module.draw(startTime);
-    capturer.capture(module.canvas);
+    module.Render();
   }
 
   update();

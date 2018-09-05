@@ -64,7 +64,7 @@ plane.position.y=0;
 //scene.add( cube );
 m.rotation.x = 100;
 m.dynamic= true;
-Render();
+//Render();
 function Render(){
 
 
@@ -86,6 +86,6 @@ m.scale.set(a,a,a);
   //m.cube.scale.set(-a,-a,-a);
 renderer.render(scene, camera);
 
-requestAnimationFrame(Render);
 }
-export default {canvas,ico};
+
+export  {canvas,Render};
