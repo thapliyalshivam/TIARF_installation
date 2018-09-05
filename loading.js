@@ -3,7 +3,7 @@ async function loadModule() {
   const module = await
   import (`./js/main_${num}.js`);
    document.body.appendChild(module.domElement);
-return module
+return module;
 
 }
 
