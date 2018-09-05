@@ -13,6 +13,8 @@ camera.position.z = 100;
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
 
+const canvas = renderer.domElement;
+
 //document.body.appendChild( renderer.domElement );
 
 var m = new THREE.Object3D();
@@ -86,4 +88,4 @@ renderer.render(scene, camera);
 
 requestAnimationFrame(Render);
 }
-export default renderer;
+export default {canvas,ico};
