@@ -4,7 +4,14 @@ async function loadModule() {
   import (`./js/main_${num}.js`);
   document.body.appendChild(module.canvas);
   document.body.style.margin="0px";
-return module;
+
+    function update() {
+      requestAnimationFrame(update);
+      module.Render();
+    }
+
+    update();
+
 
 }
 
@@ -22,16 +29,9 @@ async function init() {
     module = await loadModule();
   }
 
-  function update() {
-    requestAnimationFrame(update);
-    module.Render();
-  }
-
-  update();
-
   window.addEventListener('hashchange', async e => {
     reload();
   })
 }
 
-window.addEventListener('load', init);
+window.addEventListener('load', loadModule);
