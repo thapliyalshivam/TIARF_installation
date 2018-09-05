@@ -4,9 +4,8 @@ async function loadModule() {
   import (`./js/main_${num}.js`);
 
   document.body.appendChild(module.domElement);
-  return module;
+
 }
 
-window.skip = false;
 
 window.addEventListener('load', loadModule);
