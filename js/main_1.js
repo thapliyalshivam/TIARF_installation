@@ -12,7 +12,6 @@ camera.position.z = 100;
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
-document.body.appendChild(renderer.domElement);
 
 
 
@@ -87,4 +86,4 @@ renderer.render(scene, camera);
 
 requestAnimationFrame(Render);
 }
-export default renderer;
+export default renderer.domElement;
