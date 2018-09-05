@@ -3,6 +3,7 @@ async function loadModule() {
   const module = await
   import (`./js/main_${num}.js`);
   document.body.appendChild(module.canvas);
+  document.body.style.margin="0px";
 return module;
 
 }
