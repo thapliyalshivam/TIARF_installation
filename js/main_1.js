@@ -86,4 +86,4 @@ renderer.render(scene, camera);
 
 requestAnimationFrame(Render);
 }
-export default renderer;
+export  renderer;
