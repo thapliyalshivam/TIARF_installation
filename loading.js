@@ -1,6 +1,3 @@
-
-window.addEventListener('load', loadModule);
-
 async function loadModule() {
   const num = window.location.hash.substr(1) || 1;
   const module = await
@@ -9,12 +6,6 @@ async function loadModule() {
   return module;
 }
 
-async function init() {
-  let module = await loadModule();
+window.skip = false;
 
-  async function reload() {
-    if (module && module.canvas) {
-      document.body.removeChild(module.canvas);
-    }
-    module = await loadModule();
-  }
+window.addEventListener('load', loadModule);
