@@ -7,8 +7,8 @@ return module
 }
 
 function initalize(){
-  var mod1 = await loadModule();
-    document.body.appendChild(mod1);
+  var mod = loadModule();
+    document.body.appendChild(mod);
 }
 
 window.addEventListener('load', initalize);
