@@ -67,8 +67,6 @@ Render();
 function Render(){
 
 
-
-
 				var time = Date.now() * 0.0005;
 				light1.position.x = Math.sin( time * 0.7 ) * 30;
 				light1.position.y = Math.cos( time * 0.5 ) * 40;
