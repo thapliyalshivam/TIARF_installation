@@ -8,7 +8,7 @@ return module
 
 function initalize(){
   var mod = loadModule();
-    document.body.appendChild(mod);
+    document.body.appendChild(mod.domElement);
 }
 
 window.addEventListener('load', initalize);
