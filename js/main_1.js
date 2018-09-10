@@ -21,17 +21,17 @@ var m = new THREE.Object3D();
 
 var geometry = new THREE.IcosahedronGeometry
  (20,2);
-Console.log("geometry");
+console.log("geometry");
 console.log(geometry);
 
 var material = new THREE.MeshNormalMaterial({wireframe:true});
 
-Console.log("material");
+console.log("material");
 console.log(material);
 // add the geometry to the mesh - and apply the material to it
 var ico = new THREE.Mesh( geometry, material );
 
-Console.log("mesh");
+console.log("mesh");
 console.log(ico);
 
 m.add(ico);
