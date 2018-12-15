@@ -92,10 +92,10 @@ earth.position.z +=-15;
 scene.add (earth);
 
 
-var geometry = new THREE.BoxGeometry( 5, .5, .5 );
+var geometry = new THREE.SphereBufferGeometry(10,32,32);
     var material = new THREE.MeshBasicMaterial( { color: new THREE.Color("white"),  transparent:true, opacity:1, side: THREE.DoubleSide } );
     var obj = new THREE.Mesh( geometry, material );
-    obj.position.set( x, 0, z );
+    obj.position.set( 20, 10, 10 );
     obj.rotateY(Math.PI/4);
     obj.receiveShadow = true;
     obj.castShadow = true;
