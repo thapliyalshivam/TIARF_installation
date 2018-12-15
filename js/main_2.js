@@ -25,10 +25,10 @@ var m = new THREE.Object3D();
 var params = {
   projection: 'normal',
   background: false,
-  exposure: 1.2,
-  bloomStrength: 3,
-  bloomThreshold: 0.85,
-  bloomRadius: 1
+  exposure: 1.4,
+  bloomStrength: 2.1,
+  bloomThreshold: 0,
+  bloomRadius: 0.72
 };
 
 var renderScene = new THREE.RenderPass( scene, camera );
@@ -37,13 +37,19 @@ var effectFXAA = new THREE.ShaderPass( THREE.FXAAShader );
 effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
 
 var bloomPass = new THREE.UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 ); //1.0, 9, 0.5, 512);
+
+bloomPass.bloomStrength= 2.1
+bloomPass.bloomThreshold= 0
+bloomPass.bloomRadius= 0.72
 bloomPass.renderToScreen = true;
+
 
 var composer = new THREE.EffectComposer( renderer );
 composer.setSize( window.innerWidth, window.innerHeight );
 composer.addPass( renderScene );
 composer.addPass( effectFXAA );
 composer.addPass( bloomPass );
+//  shaderActive = "bloom";
 
 renderer.gammaInput = true;
 renderer.gammaOutput = true;
@@ -53,8 +59,8 @@ renderer.gammaOutput = true;
 //light setup
 //scene.add( new THREE.AmbientLight( 0xffffff ) );
 
-				scene.add( new THREE.AmbientLight( 0xffffff, 0.1 ) );
-
+				//scene.add( new THREE.AmbientLight( 0xffffff, 0.1 ) );
+scene.add( new THREE.AmbientLight( 0x404040 ) );
 				var spotLight = new THREE.SpotLight( 0xffffff, 1 );
 				spotLight.position.set( 50, 100, 50 );
 				spotLight.angle = Math.PI / 7;
