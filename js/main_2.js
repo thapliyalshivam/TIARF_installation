@@ -92,6 +92,19 @@ earth.position.z +=-15;
 scene.add (earth);
 
 
+var geometry = new THREE.BoxGeometry( 5, .5, .5 );
+    var material = new THREE.MeshBasicMaterial( { color: new THREE.Color("white"),  transparent:true, opacity:1, side: THREE.DoubleSide } );
+    var obj = new THREE.Mesh( geometry, material );
+    obj.position.set( x, 0, z );
+    obj.rotateY(Math.PI/4);
+    obj.receiveShadow = true;
+    obj.castShadow = true;
+  //  geomList.push(obj)
+    scene .add(obj);
+
+
+
+
 var geometry = new THREE.PlaneGeometry( window.innerWidth,window.innerHeight, 90,90 );
 var material = new THREE.MeshLambertMaterial( { color: 0x333333, overdraw: 0.5 } );
 var plane = new THREE.Mesh( geometry, material );
