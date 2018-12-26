@@ -75,8 +75,6 @@ m.rotation.x = 100;
 m.dynamic= true;
 //Render();
 function Render(){
-
-
 				var time = Date.now() * 0.0005;
 				light1.position.x = Math.sin( time * 0.7 ) * 30;
 				light1.position.y = Math.cos( time * 0.5 ) * 40;
@@ -92,7 +90,7 @@ var a =(Math.sin(Date.now()*0.004444)*.9)+2;
 m.rotation.y += 0.01;
 m.rotation.x += 0.01;
 m.scale.set(a,a,a);
-  //m.cube.scale.set(-a,-a,-a);
+
 renderer.render(scene, camera);
 
 }
