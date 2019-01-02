@@ -1,4 +1,4 @@
-import THREE from './third_party/three.js';
+
 
 var scene = new THREE.Scene();
 
