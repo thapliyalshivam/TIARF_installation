@@ -1,18 +1,29 @@
 async function loadModule() {
-  const module = await
-  import (`./js/2d_context.js`);
-  document.body.appendChild(module.canvas);
-  document.body.style.margin="0px";
+const module = await
+import (`./js/2d_context.js`);
+return module;
+}
 
-    // function update() {
-    //   requestAnimationFrame(update);
-    //   module.Render();
-    // }
 
-    module.Render();
+async function init(){
 
+    let module = await loadModule();
+
+    document.body.appendChild(module.canvas);
+    document.body.style.margin="0px";
+
+      function update() {
+        requestAnimationFrame(update);
+        module.Render();
+      }
+
+      update();
 
 }
+
+
+
+
 //
 // async function init() {
 //   let module = await loadModule();
@@ -33,4 +44,4 @@ async function loadModule() {
 //   })
 // }
 
-window.addEventListener('load', loadModule);
+window.addEventListener('load', init);

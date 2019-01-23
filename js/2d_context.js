@@ -1,5 +1,5 @@
-let visuals = import colours from ('./visuals.js');
-console.log(visuals);
+import {colours} from './visuals.js';
+
 
 let canvas = document.createElement("canvas");
 canvas.height = window.innerHeight;
@@ -7,8 +7,7 @@ console.log(document.innerHeight);
 console.log(document.innerWidth);
 canvas.width = window.innerWidth;
 
-console.log(visuals);
-
+console.log(colours);
 let context = canvas.getContext('2d');
 
 
