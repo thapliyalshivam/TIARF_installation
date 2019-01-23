@@ -1,16 +1,15 @@
 async function loadModule() {
-  const num = window.location.hash.substr(1) || 1;
   const module = await
-  import (`./js/loops/main_${num}.js`);
+  import (`./js/2d_context.js`);
   document.body.appendChild(module.canvas);
   document.body.style.margin="0px";
 
-    function update() {
-      requestAnimationFrame(update);
-      module.Render();
-    }
+    // function update() {
+    //   requestAnimationFrame(update);
+    //   module.Render();
+    // }
 
-    update();
+    module.Render();
 
 
 }
