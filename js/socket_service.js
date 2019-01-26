@@ -1,21 +1,32 @@
-let canvas = document.createElement("canvas");
-canvas.height = window.innerHeight;
-console.log(document.innerHeight);
-console.log(document.innerWidth);
-canvas.width = window.innerWidth;
+var ws = new WebSocket("ws://localhost:9001");
+
+// Set event handlers.
+ws.translations={
+x_offset:0,
+y_offset:0,
+segments:38
+};
+
+ws.onopen = function() {
+  console.log("onopen");
+};
+
+ws.onmessage = function(e) {
+  let parsed = JSON.parse(e.data);
+//  console.log(parsed);
+  this.translations.x_offset = parsed.gamma+1000;
+  this.translations.y_offset = parsed.beta+1000;
+  //this.translations.segments = parsed.alpha;
+};
+
+ws.onclose = function() {
+  console.log("onclose");
+};
+
+ws.onerror = function(e) {
+  output("onerror");
+  console.log(e)
+};
 
 
-
-let context = canvas.getContext('2d');
-
-
-function Render(){
-context.beginPath();
-   context.arc(0,0,14, 0, 2 * Math.PI, false);
-   context.fillStyle = 'green';
-   context.fill();
-   context.lineWidth = 5;
-   context.strokeStyle = '#003300';
-   context.stroke();
- }
-export {canvas,Render};
+export default ws;

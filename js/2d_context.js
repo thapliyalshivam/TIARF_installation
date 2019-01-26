@@ -1,4 +1,5 @@
 import {colours, sprite} from './visuals.js';
+import ws from './socket_service.js';
 
 
 
@@ -21,12 +22,8 @@ let context = canvas.getContext('2d');
 let patterns = [];
 
 //texture translations
-var translations={
-x_offset:Math.random()*1000,
-y_offset:Math.random()*500,
-segments:38
-};
-var angle = (2*Math.PI)/translations.segments;
+
+var angle = (2*Math.PI)/ws.translations.segments;
 
 //loading textures
 var img = document.getElementById("lamp1")
@@ -37,12 +34,13 @@ var pat1 = context.createPattern(img, "repeat");
 
 function Render(){
 
+console.log(ws);
 const t=Date.now()/1000;
 
 context.save();
 context.translate(center.x,center.y);
 
-for(let i=1;i<=translations.segments;++i )
+for(let i=1;i<=ws.translations.segments;++i )
 {
 
   context.rotate(angle);
@@ -55,7 +53,7 @@ for(let i=1;i<=translations.segments;++i )
   context.closePath();
   context.fillStyle = i%2?pat:pat1;
   context.save();
-  context.translate(translations.x_offset-vertical+Math.sin(t)*50,translations.y_offset-radius+Math.cos(t)*50);
+  context.translate(ws.translations.x_offset-vertical+Math.sin(t)*50,ws.translations.y_offset-radius+Math.cos(t)*50);
   context.fill();
   context.restore();
 }
