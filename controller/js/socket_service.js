@@ -19,8 +19,8 @@ let transformation = {};
   });
 
   window.addEventListener('click', (e)=>{
-    transformation.capture= capture;
-  capture = true;
+    transformation.capture= true;
+    ws.send(JSON.stringify(transformation));
 
   });
   console.log("onopen");

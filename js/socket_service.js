@@ -16,6 +16,7 @@ ws.onmessage = function(e) {
 //  console.log(parsed);
   this.translations.x_offset = parsed.gamma;
   this.translations.y_offset = parsed.beta;
+    this.translations.event = parsed.capture||false;
   //this.translations.segments = parsed.alpha;
 };
 

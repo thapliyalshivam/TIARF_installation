@@ -61,6 +61,8 @@ for(let i=1;i<=ws.translations.segments;++i )
 }
 context.restore();
 
+if (ws.translations.event)
+    Canvas2Image.saveAsImage(canvas, 1000, 1000, 'yo.png');
 
  }
 export {canvas,Render};
