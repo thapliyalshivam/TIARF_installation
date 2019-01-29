@@ -14,8 +14,8 @@ ws.onopen = function() {
 ws.onmessage = function(e) {
   let parsed = JSON.parse(e.data);
 //  console.log(parsed);
-  this.translations.x_offset = parsed.gamma+1000;
-  this.translations.y_offset = parsed.beta+1000;
+  this.translations.x_offset = parsed.gamma;
+  this.translations.y_offset = parsed.beta;
   //this.translations.segments = parsed.alpha;
 };
 

@@ -34,7 +34,7 @@ var pat1 = context.createPattern(img, "repeat");
 
 function Render(){
 
-console.log(ws);
+//console.log(ws);
 const t=Date.now()/1000;
 
 context.save();
@@ -53,7 +53,9 @@ for(let i=1;i<=ws.translations.segments;++i )
   context.closePath();
   context.fillStyle = i%2?pat:pat1;
   context.save();
+
   context.translate(ws.translations.x_offset-vertical+Math.sin(t)*50,ws.translations.y_offset-radius+Math.cos(t)*50);
+//  context.translate(ws.translations.x_offset,ws.translations.y_offset);
   context.fill();
   context.restore();
 }

@@ -6,6 +6,12 @@ h1{
   left:calc(50% - 130px);
 }
 
+img{
+  display: block;
+  width: 70%;
+  margin: 50% auto;
+
+}
 
 .loader {
   position:fixed;

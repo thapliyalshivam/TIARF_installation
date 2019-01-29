@@ -11,6 +11,12 @@ async function init(){
 
     document.body.appendChild(module.canvas);
     document.body.style.margin="0px";
+    window.addEventListener('click', (e)=>{
+    Canvas2Image.saveAsImage(module.canvas, 1000, 1000, 'yo.png');
+
+
+    });
+
 
       function update() {
         requestAnimationFrame(update);
