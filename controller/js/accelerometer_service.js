@@ -10,8 +10,8 @@ let transformation={
 window.addEventListener('deviceorientation',(e)=>{
 
     transformation.alpha = e.alpha;
-      transformation.beta = e.beta;
-        transformation.gamma= e.gamma;
+      transformation.beta = e.beta+180;
+        transformation.gamma= e.gamma+90;
   a.innerHTML = e.alpha+"   "+e.beta+"     "+e.gamma;
 
 });

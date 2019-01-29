@@ -4,7 +4,7 @@ var ws = new WebSocket("ws://localhost:9001");
 ws.translations={
 x_offset:0,
 y_offset:0,
-segments:38
+segments:28
 };
 
 ws.onopen = function() {
