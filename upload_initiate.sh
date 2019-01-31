@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python /Users/t.shivam/Documents/TIRAF/upload_service.py
+PYTHONPATH=/home/myName/lib/python2.7 python /Users/t.shivam/Documents/TIRAF/upload_service.py

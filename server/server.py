@@ -11,7 +11,7 @@ def new_client(client, server):
 	if client['address'][0]=='127.0.0.1':
 		print("---------------server has joined---------------")
 		GLOB['receiver'] = client
-	elif client['address'][0]=='192.168.0.130':
+	elif client['address'][0]!='127.0.0.1':
 		print("_______________controller has joined____________")
 		GLOB['sender'] = client
 	print(GLOB)
@@ -24,7 +24,7 @@ def client_left(client, server):
 	if client['address'][0]=='127.0.0.1':
 		print("---------------server has left---------------")
 		GLOB['receiver'] = None
-	elif client['address'][0]=='192.168.0.130':
+	elif client['address'][0]!='127.0.0.1':
 		print("_______________controller has left______________")
 		GLOB['sender'] = None
 
