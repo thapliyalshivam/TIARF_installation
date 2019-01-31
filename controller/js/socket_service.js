@@ -1,6 +1,6 @@
 //import transformation from './accelerometer_service.js'
 
-let ws = new WebSocket("ws://192.168.1.15:9001");
+let ws = new WebSocket("ws://192.168.43.48:9001");
 let capture = false;
 // Set event handlers.
 ws.onopen = function() {
