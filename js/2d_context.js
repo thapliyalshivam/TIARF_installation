@@ -36,6 +36,8 @@ function Render(){
 
 //console.log(ws);
 const t=Date.now()/1000;
+const t1=Date.now()/10000;
+const rotation=(Date.now()/100)%3835;
 
 context.save();
 context.translate(center.x,center.y);
@@ -54,7 +56,7 @@ for(let i=1;i<=ws.translations.segments;++i )
   context.fillStyle = i%2?pat:pat1;
   context.save();
 
-  context.translate(ws.translations.x_offset-vertical+Math.sin(t)*50,ws.translations.y_offset-radius+Math.cos(t)*50);
+  context.translate(rotation+ws.translations.x_offset-vertical+Math.sin(t)*50,ws.translations.y_offset-radius+Math.cos(t1)*2600);
 //  context.translate(ws.translations.x_offset,ws.translations.y_offset);
   context.fill();
   context.restore();
