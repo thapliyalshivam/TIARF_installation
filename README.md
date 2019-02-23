@@ -1,8 +1,6 @@
 # TIARF_installation
 
-The Irregulars art fair installation is an interactive art installation that was held in Delhi. With the idea being around 
-altered realities, the installation explored visual patterns by responding to the audience's hand movements as a symbol of 
-modern day Kaliedoscope.
+Bahoroopdarshak is an interactive art made in HTML5 Canvas and WebSockets. The artwork mimics the kaleidoscopic effect to the movement of the viewer's hand's motion, showing an eternal dance of colours and patterns. The artwork was also a part of the Irregulars art fair held in Delhi along with other artists' work from all across the world.
 
 ![image](https://static1.squarespace.com/static/5a87149ab078691428fbd4db/5a9e3bc1ec212d0cc09052c6/5c71cd0f41920257610a02ac/1550961971460/IMG_20190130_192812.jpg?format=2500w)
 
