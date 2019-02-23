@@ -4,7 +4,7 @@ The Irregulars art fair installation is an interactive art installation that was
 altered realities, the installation explored visual patterns by responding to the audience's hand movements as a symbol of 
 modern day Kaliedoscope.
 
-![image](https://files.slack.com/files-pri/T0BHUEBM1-FGF12UK99/img_20190130_192812.jpg)
+![image](https://static1.squarespace.com/static/5a87149ab078691428fbd4db/t/5ae74fe0aa4a99e142383878/1525108622619/?format=1500w)
 
 ## Live link
 
