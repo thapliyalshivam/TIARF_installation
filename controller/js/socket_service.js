@@ -1,9 +1,10 @@
 //import transformation from './accelerometer_service.js'
 
-let ws = new WebSocket("ws://192.168.43.48:9001");
+let ws = new WebSocket("ws://192.168.0.113:9001");
 let capture = false;
 // Set event handlers.
 ws.onopen = function() {
+
 
 let transformation = {};
   window.addEventListener('deviceorientation',(e)=>{
@@ -18,11 +19,6 @@ let transformation = {};
 
   });
 
-  window.addEventListener('click', (e)=>{
-    transformation.capture= true;
-    ws.send(JSON.stringify(transformation));
-
-  });
   console.log("onopen");
 };
 

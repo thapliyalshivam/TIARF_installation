@@ -7,6 +7,28 @@ y_offset:0,
 segments:28
 };
 
+if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
+    // setup real compass thing, with event.alpha
+
+
+
+
+    window.addEventListener('deviceorientation',(e)=>{
+
+
+      //  transformation.alpha = (e.alpha)*14.8;
+        ws.translations.y_offset = (e.beta+180)*10;
+        ws.translations.x_offset= (e.gamma+90)*21;
+        ws.translations.event= false;
+
+    });
+
+
+} else {
+  console.log("not supported")
+}
+
+
 ws.onopen = function() {
   console.log("onopen");
 };
