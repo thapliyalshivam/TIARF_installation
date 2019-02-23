@@ -31,7 +31,7 @@ To install and try the artwork, follow these steps:
 
 5- start http server in root folder using 'python3 -m http.server'
 
-6- open 0.0.0.0:8000 on desktop
+6- open 0.0.0.0:8000 on chrome browser
 
-7- open [system's local ip]:8000/controller from mobile
+7- open [system's local ip]:8000/controller from mobile chrome
 
