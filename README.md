@@ -1,7 +1,7 @@
 # TIARF_installation
 
 Bahoroopdarshak is an interactive art made in HTML5 Canvas and vanillajs. The artwork mimics the kaleidoscopic effect to the movement of the viewer's hand's motion, showing an eternal dance of colours and patterns. 
-The artwork can be browsed in any mobile chrome browser.
+The interative artwork can be experienced in any mobile chrome browser.
 
 The artwork was also a part of the Irregulars art fair held in Delhi along with other artists' work from all across the world for which it was adapted to work with websockets.
 
@@ -12,6 +12,7 @@ The artwork was also a part of the Irregulars art fair held in Delhi along with 
 ## Live link
 
 https://thapliyalshivam.github.io/TIARF_installation/
+open the link in mobile chrome browser
 
 
 ## Video
@@ -20,7 +21,11 @@ https://www.youtube.com/watch?v=ModIH3M1dpo&feature=youtu.be
 
 ## Installation
 
-To install and try the artwork, follow these steps:
+The interative artwork can be experienced in any mobile chrome browser.
+https://thapliyalshivam.github.io/TIARF_installation/
+
+
+For Desktop setup, follow these steps:
 
 1- clone the repo
 
